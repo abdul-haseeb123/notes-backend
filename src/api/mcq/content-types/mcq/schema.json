@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mcqs",
+  "info": {
+    "singularName": "mcq",
+    "pluralName": "mcqs",
+    "displayName": "MCQS"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question"
+    }
+  }
+}
