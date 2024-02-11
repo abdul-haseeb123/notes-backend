@@ -39,8 +39,15 @@
       "target": "api::category.category",
       "mappedBy": "lessons"
     },
+    "youtube_video": {
+      "type": "string"
+    },
     "content": {
-      "type": "richtext"
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
